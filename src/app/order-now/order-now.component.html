@@ -1,0 +1,25 @@
+<div class="ss">
+        <div><h1 class="a">ddd</h1>
+        </div>
+<ul>
+        <li *ngFor="let product of product">
+
+       
+                <div class="row justify-content-center">
+        
+                        <div class="product-image    text-center ">
+        
+                                <div class="card-btn">
+                                 <img  routerLink="/food/{{product.id}}"  class="img" [src]="product.imageUrl" alt="Lasange" >
+                                <h3>{{product.name}}</h3>
+                                </div>
+                        </div>
+                </div>
+
+        
+
+        </li>
+
+</ul>
+
+</div>

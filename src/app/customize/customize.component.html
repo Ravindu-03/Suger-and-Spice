@@ -1,0 +1,113 @@
+
+<div class="ss">
+    <p class="aa">aaaa</p>
+</div>
+<div class="container1">
+    
+    
+</div>
+
+
+
+<div class="container">
+  
+    <img [src]= "foodproduct.imageUrl" />
+    <div class="details">
+
+<ul >
+        <li class="header text-center">
+            {{foodproduct.name}} 
+        </li>
+
+        <li class="header dropdownli">
+            <select>
+                <option>
+                    Chicken
+                </option>
+                <option>
+                    Beef
+                </option>
+            </select>
+        </li>
+
+        
+
+            <li class="header size">
+               
+                <input type="radio"  name="medium" />
+<label> Small</label>
+<input type="radio"  name="medium" />
+<label> Medium</label>
+<input type="radio" name="medium" />
+<label> Large</label>
+
+                </li>
+
+                <li class="header">
+                    price : {{foodproduct.price}}.00
+                    </li>
+
+            <li class="header">
+                <button (click)="addToCart()" >Add to cart</button>
+                </li>
+        </ul>
+        <div >
+            
+        </div>
+  
+    </div>
+
+</div>
+
+<div>
+    
+
+<h1>Cart Page</h1>
+
+<div class="container">
+  <ul>
+    <li *ngFor="let cartitem of Cart.items">
+      <div>
+        <img [src]="cartitem.Product.imageUrl" />
+      </div>
+      <div>
+        <a routerLink="/product/{{ cartitem.Product.id }}">
+          {{ cartitem.Product.name }}
+        </a>
+      </div>
+      <div>
+        <select
+          #quantitySelect
+          [value]="cartitem.quantity"
+          (change)="changeQuantity(cartitem, quantitySelect.value)"
+        >
+          <option><a routerLink="/about">1</a></option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+        </select>
+      </div>
+      <div>Rs. {{ cartitem.price }}.00</div>
+      <div>
+        <button class="remove-button" (click)="removeFromCart(cartitem)">
+          Remove
+        </button>
+      </div>
+    </li>
+  </ul>
+
+  <div class="checkout">
+    <div>
+      
+      <div class="total-price">Rs. {{ Cart.totalPrice }}.00</div>
+    </div>
+    <a routerLink="/about">Proceed to Checkout</a>
+  </div>
+</div>
+</div>

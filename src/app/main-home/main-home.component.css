@@ -1,0 +1,67 @@
+.main_gallery{
+    width: 100%;
+
+}
+.mainCarousel{
+    z-index: 1;
+}
+.rr{
+    width: 100%;
+}
+.colFix{
+    width:30%;
+}
+.marAl{
+    margin-top:220px;
+    margin-bottom:150px;
+}
+.gallery2{
+    width: 100%;
+    
+}
+.gallery3{
+    width: 35%;    
+    margin-top:70px;
+    margin-bottom: 120px;
+    margin-left: 160px;
+}
+
+
+.img{
+    margin-top: 150px;
+    width: 350px;
+    height: 350px;
+    margin-right: 0px;
+    border-radius: 30px;
+
+}
+
+
+
+.img2{
+    margin-top: 40px;
+    width: 350px;
+    height: 350px;
+    margin-right: 0px;
+    border-radius: 30px;
+    border-radius: 30px;
+
+}
+
+.container{
+
+padding-left:0px;
+
+}
+
+h3{
+    margin-bottom: 50px;
+   
+}
+    
+
+.aa{
+    background-color: #dfc5b7;
+    
+    
+}
